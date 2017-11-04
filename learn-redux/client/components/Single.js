@@ -7,6 +7,8 @@ const Single = React.createClass({
     const code = this.props.params.postId;
     const i = this.props.posts.findIndex((post) => post.code === code);
     const post = this.props.posts[i];
+    const postComments = this.props.comments[code] || [];
+
     return (
       <div className="single-photo">
         <Photo 
@@ -14,7 +16,7 @@ const Single = React.createClass({
           post={post}
           { ...this.props }
         />
-        <Comments />
+        <Comments postComments={postComments}/>
 
       </div>
     );
