@@ -6,15 +6,17 @@ export function incrementLike(index){
   }
 }
 
-// add comment
+// add a  comment
 export function addComment(postId, author, comment){
   return {
     type: 'ADD_COMMENT',
     postId,
     author,
     comment
+  }
 }
-// remove comment
+
+// remove a comment
 export function removeComment(postId, index){
   return {
     type: 'REMOVE_COMMENT',
